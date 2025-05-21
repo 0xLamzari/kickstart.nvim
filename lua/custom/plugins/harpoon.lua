@@ -23,32 +23,40 @@ return {
       })
 
       -- The keymaps rationale is "leader and home row with right hand (i use an Ergodox EZ with minimal custom keys)"
-      vim.keymap.set('n', '<leader>j', function()
+      vim.keymap.set('n', '<leader>h', function()
         harpoon:list():select(1)
       end, { desc = 'Harpoon 1' })
 
-      vim.keymap.set('n', '<leader>k', function()
+      vim.keymap.set('n', '<leader>j', function()
         harpoon:list():select(2)
+      end, { desc = 'Harpoon 1' })
+
+      vim.keymap.set('n', '<leader>k', function()
+        harpoon:list():select(3)
       end, { desc = 'Harpoon 2' })
 
       vim.keymap.set('n', '<leader>l', function()
-        harpoon:list():select(3)
+        harpoon:list():select(4)
       end, { desc = 'Harpoon 3' })
 
       vim.keymap.set('n', '<leader>;', function()
-        harpoon:list():select(4)
+        harpoon:list():select(5)
       end, { desc = 'Harpoon 4' })
 
+      vim.keymap.set('n', '<leader>n', function()
+        harpoon:list():select(6)
+      end, { desc = 'Harpoon 3' })
+
       vim.keymap.set('n', '<leader>m', function()
-        harpoon:list():select(5)
+        harpoon:list():select(7)
       end, { desc = 'Harpoon 5' })
 
       vim.keymap.set('n', '<leader>,', function()
-        harpoon:list():select(6)
+        harpoon:list():select(8)
       end, { desc = 'Harpoon 6' })
 
       vim.keymap.set('n', '<leader>.', function()
-        harpoon:list():select(7)
+        harpoon:list():select(9)
       end, { desc = 'Harpoon 7' })
     end,
   },
