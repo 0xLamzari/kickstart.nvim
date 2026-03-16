@@ -915,6 +915,15 @@ require('lazy').setup({
       vim.g.undotree_DiffCommand = 'FC'
     end,
   },
+  {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({
+        ignore_filetypes = { "env", "log", "bigfile" },
+      })
+    end,
+  },
+
 
   require 'custom.plugins.harpoon',
   require 'custom.plugins.git-worktree',
