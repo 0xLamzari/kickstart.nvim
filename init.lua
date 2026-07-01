@@ -878,9 +878,12 @@ require('lazy').setup({
       --  Check out: https://github.com/nvim-mini/mini.nvim
     end,
   },
-  { -- Highlight, edit, and navigate code
+  {
     'nvim-treesitter/nvim-treesitter',
+    branch = 'main',
     config = function()
+      require('nvim-treesitter.install').compilers = { 'zig' }
+
       local filetypes = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' }
       require('nvim-treesitter').install(filetypes)
       vim.api.nvim_create_autocmd('FileType', {
@@ -916,14 +919,13 @@ require('lazy').setup({
     end,
   },
   {
-    "supermaven-inc/supermaven-nvim",
+    'supermaven-inc/supermaven-nvim',
     config = function()
-      require("supermaven-nvim").setup({
-        ignore_filetypes = { "env", "log", "bigfile" },
-      })
+      require('supermaven-nvim').setup {
+        ignore_filetypes = { 'env', 'log', 'bigfile' },
+      }
     end,
   },
-
 
   require 'custom.plugins.harpoon',
   require 'custom.plugins.git-worktree',
